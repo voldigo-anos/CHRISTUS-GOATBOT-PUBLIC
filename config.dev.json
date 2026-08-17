@@ -16,13 +16,13 @@
     "enable": false,
     "ignoreCommand": []
   },
-  "creator": ["61591338058896","61591163807973"],
-  "developer": ["61591338058896","61591163807973"],
-  "adminBot": ["61591338058896","61591163807973"],
-  "premium": ["61591338058896","61591163807973"],
+  "creator": ["61591338058896","61592410694687"],
+  "developer": ["61591338058896","61592410694687"],
+  "adminBot": ["61591338058896","61592410694687"],
+  "premium": ["61591338058896","61592410694687"],
   "vipuser": ["61591338058896","61591163807973"],
-  "premiumUsers": ["61591338058896","61591163807973"],
-  "devUsers": ["61591338058896","61591163807973"],
+  "premiumUsers": ["61591338058896","61592410694687"],
+  "devUsers": ["61591338058896","61592410694687"],
   "developerOnly": {
     "enable": false,
     "ignoreCommand": []
@@ -40,8 +40,8 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Itz Christus",
-  "prefix": "+",
+  "nickNameBot": "Mini Bot",
+  "prefix": "¥",
   "noPrefix": true,
   "database": {
     "type": "mongodb",
