@@ -16,13 +16,12 @@
     "enable": false,
     "ignoreCommand": []
   },
-  "creator": ["61591338058896","61591163807973"],
-  "developer": ["61591338058896","61591163807973"],
-  "adminBot": ["61591338058896","61591163807973"],
-  "premium": ["61591338058896","61591163807973"],
-  "vipuser": ["61591338058896","61591163807973"],
-  "premiumUsers": ["61591338058896","61591163807973"],
-  "devUsers": ["61591338058896","61591163807973"],
+  "creator": ["61573267116639"],
+  "developer": ["61573267116639"],
+  "adminBot": ["61573267116639"],
+  "vipuser": ["61573267116639"],
+  "premiumUsers": ["61573267116639"],
+  "devUsers": ["61573267116639"],
   "developerOnly": {
     "enable": false,
     "ignoreCommand": []
@@ -41,7 +40,7 @@
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "Itz Christus",
-  "prefix": "+",
+  "prefix": "÷",
   "noPrefix": true,
   "database": {
     "type": "mongodb",
@@ -145,7 +144,7 @@
   },
   "notifyAdminOnDeploy": {
     "enable": true,
-    "message": "✅ {botName} vient d'être déployé avec succès et est maintenant en ligne.\n🕒 {time}\n🆔 Bot ID: {botID}",
+    "message": "✅ {Cd dior vient d'êbotNa deloyé avec succès et est maintenant en ligne.\n🕒 {time}\n🆔 Bot ID: {botID}",
     "notes": "Si enable est true, le bot envoie un message en PV à chaque ID de adminBot dès qu'il démarre/est déployé. Le message peut contenir {botName}, {time} et {botID}."
   }
 }
