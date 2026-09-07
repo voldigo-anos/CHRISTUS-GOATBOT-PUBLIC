@@ -232,6 +232,14 @@ const fonts = {
     if (text == null) return '';
     if (typeof text !== 'string') return text;
 
+    // 0) Protect links / emails / file paths: they must stay in normal writing.
+    const protectedParts = [];
+    const linkRegex = /((?:https?:\/\/|www\.)[^\s<>"'`]+|[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}|\b[a-zA-Z0-9-]+\.(?:com|net|org|io|dev|app|xyz|me|info|co|fr|vercel\.app)(?:\/[^\s]*)?)/gi;
+    text = text.replace(linkRegex, (match) => {
+      protectedParts.push(match);
+      return `\u0000${protectedParts.length - 1}\u0001`;
+    });
+
     // 1) Markdown markers — longest first so ***x*** isn't eaten by **x**.
     text = text.replace(/\*\*\*([^*]+?)\*\*\*/g, (_, t) => fonts.boldItalic(t));
     text = text.replace(/\*\*([^*]+?)\*\*/g, (_, t) => fonts.sansSerifBold(t));
@@ -243,8 +251,12 @@ const fonts = {
     text = text.replace(/[A-Z]/g, ch => fonts.sansSerifBold(ch));
     text = text.replace(/[a-z]/g, ch => fonts.sansSerif(ch));
 
+    // 3) Restore links untouched.
+    text = text.replace(/\u0000(\d+)\u0001/g, (_, i) => protectedParts[Number(i)]);
+
     return text;
   }
+
 };
 
 module.exports = fonts;
